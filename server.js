@@ -23,6 +23,6 @@ var routes = require("./controllers/burgers_controller.js");
 
 app.use("/", routes);
 
-var port = 3000;
+var port = process.env.PORT || 3000;
 app.listen(port);
 console.log("connected to " + port);
