@@ -1,6 +1,6 @@
 
 
-<h1>Make Your Burger</h1>
+<h1>Make Your Burger, and then EAT IT</h1>
 
 <img src="/assets/img/the-triple-triple-burger.jpg" alt="burger">
 
@@ -9,13 +9,13 @@
 <ul>
   {{#each burger}}
     {{#unless this.devoured}}
-     <li>
+     
        {{this.burger_name}}
         <form method="POST" action="burgers/update/{{this.id}}?_method=PUT" >
        <input type="hidden" name="devoured" value="true">
        <button type="submit">Devour Burger</button>
         </form>
-      </li>
+      
 
     {{/unless}}
   {{/each}}
@@ -27,9 +27,9 @@
 <ul>
   {{#each burger}}
     {{#if this.devoured}}
-      <li>
-      {{this.burger_name}}
-      </li>
+      
+      {{this.burger_name}},
+      
     {{/if}}
   {{/each}}
 </ul>
